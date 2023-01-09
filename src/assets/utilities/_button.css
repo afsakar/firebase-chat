@@ -1,0 +1,43 @@
+.btn {
+    @apply px-4 py-2 text-center rounded;
+}
+
+.btn-primary {
+    @apply bg-indigo-500 text-white hover:bg-indigo-600;
+}
+
+.btn-secondary {
+    @apply bg-gray-500 text-white hover:bg-gray-600;
+}
+
+.btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600;
+}
+
+.btn-warning {
+    @apply bg-yellow-500 text-white hover:bg-yellow-600;
+}
+
+.btn-success {
+    @apply bg-green-500 text-white hover:bg-green-600;
+}
+
+.btn-info {
+    @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.btn-github {
+    @apply bg-gray-900 text-white hover:bg-gray-800;
+}
+
+.has-icon {
+    @apply flex items-center justify-center gap-2;
+}
+
+.btn-sm {
+    @apply text-sm px-2 py-1;
+}
+
+.btn-lg {
+    @apply text-lg px-4 py-2;
+}
