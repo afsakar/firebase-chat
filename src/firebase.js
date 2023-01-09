@@ -81,7 +81,9 @@ export function useAuth() {
 }
 
 const q = query(collection(db, "messages"), orderBy("createdAt", "desc"), limit(100));
-const messageCollection = await getDocs(q);
+const messageCollection = computed(async () => {
+    return await getDocs(q);
+})
 
 export function useChat() {
     const messages = ref([]);
@@ -104,9 +106,9 @@ export function useChat() {
     };
 
 
-    messageCollection.forEach((doc) => {
-        messages.value.push({...doc.data(), id: doc.id});
-    });
+    // messageCollection.forEach((doc) => {
+    //     messages.value.push({...doc.data(), id: doc.id});
+    // });
 
     onSnapshot(q, (querySnapshot) => {
         messages.value = querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id}));
