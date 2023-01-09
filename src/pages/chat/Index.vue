@@ -43,8 +43,8 @@ watch(messages, () => {
     <Navbar/>
     <div class="bg-blue-400 h-[50rem] md:mx-40 mx-5 mt-5 md:px-5 py-5 px-3 rounded-lg">
       <div class="rounded rounded-b-none h-full flex-1 items-start justify-start md:px-2">
-        <div class="relative bg-repeat bg-[url('public/bg.jpg')] bg-opacity-25 rounded h-full flex flex-col flex-grow">
-          <div class="z-10 md:p-5 p-2 space-y-5 overflow-auto scrollbar h-full">
+        <div class="relative bg-repeat bg-[url('assets/bg.jpg')] bg-opacity-25 rounded h-full flex flex-col flex-grow">
+          <div class="md:p-5 p-2 space-y-5 overflow-auto scrollbar h-full">
             <Message v-for="(message, index) in messageList" :key="index" :message="message"/>
             <div ref="bottom"></div>
           </div>
@@ -55,7 +55,6 @@ watch(messages, () => {
               <button @click="send" class="btn btn-info rounded-l-none">Send</button>
             </div>
           </div>
-          <div class="absolute z-5 top-0 left-0 bg-slate-400 opacity-10 h-full w-full"></div>
         </div>
 
       </div>
